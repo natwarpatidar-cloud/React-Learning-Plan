@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import Modal from "./Modal";
 
-export const ModalPage = () => {
+export default function ModalPage () {
     const [isOpen, setIsOpen] = useState(false);
 
     const handleSubmit = (e) => {

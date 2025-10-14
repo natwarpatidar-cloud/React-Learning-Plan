@@ -1,7 +1,7 @@
 import { Moon, Sun } from "lucide-react";
 import { useLocalStorage } from "./useLocalStorage"
 
-export const ThemeToggle = () => {
+export default function ThemeToggle (){
 
     const [theme, setTheme, toggleTheme] = useLocalStorage('theme', 'light');
 

@@ -5,7 +5,7 @@ const list = Array.from({ length: 10000 }, (_, i) => ({
     description: `This is list item ${i + 1}`
 }));
 
-export const VirtualizedList = () => {
+export default function VirtualizedList () {
     return (
         <FixedSizeList
             height={800}

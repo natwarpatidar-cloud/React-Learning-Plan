@@ -2,7 +2,7 @@ import { useCallback, useState } from "react"
 import { ListOfUsers } from "./ListOfUsers"
 import { Button } from "@/components/ui/button";
 
-export const Parent = () => {
+export default function Parent () {
     const [otherState, setOtherState] = useState(10);
     const [page, setPage] = useState(1);
 

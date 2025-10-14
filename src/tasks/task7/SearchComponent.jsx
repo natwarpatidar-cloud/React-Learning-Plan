@@ -1,10 +1,8 @@
-import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { SearchIcon } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useDebounce } from "./useDebounce";
 
-export const Search = () => {
+export default function Search () {
 
     const [searchQuery, setSearchQuery] = useState("");
     const debounceVal = useDebounce(searchQuery, 2000);

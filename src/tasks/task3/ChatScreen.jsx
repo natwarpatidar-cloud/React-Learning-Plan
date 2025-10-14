@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button"
 import { ArrowUp } from "lucide-react"
 import { useOnlineStatus } from "./useOnlineStatus"
 
-export const ChatScreen = () => {
+export default function ChatScreen() {
 
     const isOnline = useOnlineStatus();
 

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 
-export const Tasks = () => {
+export default function Tasks () {
     return (
         <ul>
             <li>

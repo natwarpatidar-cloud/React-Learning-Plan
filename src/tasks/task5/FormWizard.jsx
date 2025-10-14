@@ -6,7 +6,7 @@ import { useReducer, useState } from "react"
 import formReducer from "./formReducer"
 import { Spinner } from "@/components/ui/spinner"
 
-export const FormWizard = () => {
+export default function FormWizard () {
     const [page, setPage] = useState(0);
     const [isSuccess, setIsSuccess] = useState(false);
     const [isPending, setIsPending] = useState(false);
