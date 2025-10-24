@@ -30,6 +30,9 @@ export default function Tasks () {
             <li>
                 <Link to='/shopping-cart'>Cart</Link>
             </li>
+            <li>
+                <Link to='/async-middleware'>Custom useReducer</Link>
+            </li>
         </ul>
     )
 }

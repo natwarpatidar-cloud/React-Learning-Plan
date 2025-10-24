@@ -1,7 +1,6 @@
 import { Input } from "@/components/ui/input";
 import { useEffect, useState } from "react";
 import { useDebounce } from "./useDebounce";
-
 export default function Search () {
 
     const [searchQuery, setSearchQuery] = useState("");

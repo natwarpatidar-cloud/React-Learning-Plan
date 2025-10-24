@@ -2,6 +2,8 @@ import { Route, Routes } from "react-router-dom";
 import React, { Suspense } from "react";
 import Cart from "./tasks/task10/Cart";
 import CustomErrorBoundary from "./tasks/task1/CustomErrorBoundary";
+import Counter from "./tasks/CustomUseReducer/CustomReucer";
+import RenderProp from "./tasks/RenderProp/MouseTracker";
 
 const AddCommentButton = React.lazy(() => import("./tasks/task1/AddComment"));
 const Parent = React.lazy(() => import("./tasks/task2/Parent"));
@@ -28,6 +30,8 @@ function App() {
           <Route path="/debounced-input" element={<Search />} />
           <Route path="/infinite-scroll" element={<VirtualizedList />} />
           <Route path="/shopping-cart" element={<Cart />} />
+          <Route path="/async-middleware" element={<Counter />} />
+          <Route path="/render-prop" element={<RenderProp />} />
         </Routes>
       </Suspense>
     </CustomErrorBoundary>
