@@ -6,7 +6,7 @@ export default function AddCommentButton() {
 
   useEffect(() => {
     if (shouldCrash) {
-      throw new Error("This component intentionally crashed!");
+      throw new Error("This component is intentionally crashed!");
     }
   }, [shouldCrash]);
 

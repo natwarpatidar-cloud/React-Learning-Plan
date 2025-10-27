@@ -27,6 +27,9 @@ export default function Tasks () {
             <li>
                 <Link to='/infinite-scroll'>Infinite Scroll</Link>
             </li>
+            <li>
+                <Link to='/shopping-cart'>Cart</Link>
+            </li>
         </ul>
     )
 }

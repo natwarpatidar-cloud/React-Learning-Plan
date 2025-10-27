@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import React, { Suspense } from "react";
-import {CustomErrorBoundary} from './tasks/task1/CustomErrorBoundary'; 
+import Cart from "./tasks/task10/Cart";
+import CustomErrorBoundary from "./tasks/task1/CustomErrorBoundary";
 
 const AddCommentButton = React.lazy(() => import("./tasks/task1/AddComment"));
 const Parent = React.lazy(() => import("./tasks/task2/Parent"));
@@ -14,8 +15,8 @@ const Tasks = React.lazy(() => import('./tasks/Tasks'));
 
 function App() {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <CustomErrorBoundary>
+    <CustomErrorBoundary>
+      <Suspense fallback={<div>Loading...</div>}>
         <Routes>
           <Route path="/" element={<Tasks />} />
           <Route path="/custom-error-boundary" element={<AddCommentButton />} />
@@ -26,9 +27,10 @@ function App() {
           <Route path="/compound-component" element={<ModalPage />} />
           <Route path="/debounced-input" element={<Search />} />
           <Route path="/infinite-scroll" element={<VirtualizedList />} />
+          <Route path="/shopping-cart" element={<Cart />} />
         </Routes>
-      </CustomErrorBoundary>
-    </Suspense>
+      </Suspense>
+    </CustomErrorBoundary>
   );
 }
 
