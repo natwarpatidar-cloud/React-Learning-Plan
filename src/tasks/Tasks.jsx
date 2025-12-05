@@ -30,6 +30,9 @@ export default function Tasks () {
             <li>
                 <Link to='/shopping-cart'>Cart</Link>
             </li>
+            <li>
+                <Link to='/render-prop'>Render Prop</Link>
+            </li>
         </ul>
     )
 }

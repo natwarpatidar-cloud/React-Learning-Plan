@@ -2,6 +2,10 @@ import { Route, Routes } from "react-router-dom";
 import React, { Suspense } from "react";
 import Cart from "./tasks/task10/Cart";
 import CustomErrorBoundary from "./tasks/task1/CustomErrorBoundary";
+import Page from "./tasks/Task11/Page";
+import { UserContextProvider } from "./tasks/Task11/UserContext";
+import Email from "./tasks/Task11/Email";
+import RenderList from "./tasks/task12/RenderList";
 
 const AddCommentButton = React.lazy(() => import("./tasks/task1/AddComment"));
 const Parent = React.lazy(() => import("./tasks/task2/Parent"));
@@ -17,6 +21,7 @@ function App() {
   return (
     <CustomErrorBoundary>
       <Suspense fallback={<div>Loading...</div>}>
+      <UserContextProvider>
         <Routes>
           <Route path="/" element={<Tasks />} />
           <Route path="/custom-error-boundary" element={<AddCommentButton />} />
@@ -28,7 +33,12 @@ function App() {
           <Route path="/debounced-input" element={<Search />} />
           <Route path="/infinite-scroll" element={<VirtualizedList />} />
           <Route path="/shopping-cart" element={<Cart />} />
+          <Route path="/context-optimization" element={<>
+            <Page /> <Email/>
+          </>} />
+          <Route path="/render-prop" element={<RenderList />} />
         </Routes>
+        </UserContextProvider>
       </Suspense>
     </CustomErrorBoundary>
   );

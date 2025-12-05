@@ -23,7 +23,7 @@ export default function VirtualizedList () {
 };
 
 export const ListItem = ({ index, data }) => {
-    const item = data[index]; // ✅ Access data via index
+    const item = data[index];
     return (
         <li
             key={item.title}
